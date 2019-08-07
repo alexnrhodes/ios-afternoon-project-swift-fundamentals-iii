@@ -50,7 +50,7 @@ class CurrencyConvertorViewController: UIViewController {
             let usDollarAmount = Double(usCurrency) ?? 0.00
             let pesoConvertedTotal = usDollarAmount * pesoWorth
             
-            pesoCurrencyTextField.text = "\(pesoConvertedTotal)"
+            pesoCurrencyTextField.text = "$\(pesoConvertedTotal)"
             
         } else if segmentedControl.selectedSegmentIndex == 1 {
             guard let usCurrency = usCurrencyTextField.text else {return}
@@ -58,27 +58,8 @@ class CurrencyConvertorViewController: UIViewController {
             let usDollarAmount = Double(usCurrency) ?? 0.00
             let cadConvertedTotal = usDollarAmount * cadWorth
             
-            pesoCurrencyTextField.text = "\(cadConvertedTotal)"
+            pesoCurrencyTextField.text = "$\(cadConvertedTotal)"
         }
     }
-//    func calculateCurrency() -> Double {
-//        if segmentedControl.selectedSegmentIndex == 0 {
-//            guard let usCurrency = usCurrencyTextField.text else {return 0.00}
-//            let pesoWorth = 19.78
-//            let usDollarAmount = Double(usCurrency) ?? 0.00
-//            let pesoConvertedTotal = usDollarAmount * pesoWorth
-//            
-//            return pesoConvertedTotal
-//            
-//        } else if segmentedControl.selectedSegmentIndex == 1 {
-//            guard let usCurrency = usCurrencyTextField.text else {return 0.00}
-//            let cadWorth = 1.35
-//            let usDollarAmount = Double(usCurrency) ?? 0.00
-//            let cadConvertedTotal = usDollarAmount * cadWorth
-//            return cadConvertedTotal
-//        }
-//    }
-
-
 }
 
